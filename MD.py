@@ -12,7 +12,7 @@ def dist(i, j) :
 		pos_obr[0] = pos_obr[0] + L
 	if y[j] - y[i] > L / 2 :
 		pos_obr[1] = pos_obr[1] - L
-	elif y[j] - y[i] < - L / 2 :	
+	elif y[j] - y[i] < - L / 2 :
 		pos_obr[1] = pos_obr[1] + L
 	if z[j] - z[i] > L / 2 :
 		pos_obr[2] = pos_obr[2] - L
@@ -76,7 +76,7 @@ def force(i, j) :
 	return 4 * (((1 / dist_and_dir(i, j)[3]) ** 7 / 2) * 6 - ((1 / dist_and_dir(i, j)[3]) ** 13 / 2) * 12)
 
 
-	
+
 print('введите число частиц')
 N = int(input())
 ro = 0.03
@@ -128,3 +128,5 @@ for step in range(1, n + 1):
 			z[i] +=L
 	EnF[step] = EnK + EnP
 print(EnF)
+for i in range(0, N, 100):
+	print EnF[i]
