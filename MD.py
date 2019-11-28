@@ -73,7 +73,7 @@ def pot(i, j) :
 
 
 def force(i, j) :
-	return 4 * (((1 / dist_and_dir(i, j)[3]) ** 7 / 2) * 6 - ((1 / dist_and_dir(i, j)[3]) ** 13 / 2) * 12)
+	return 4 * (((1 / dist_and_dir(i, j)[3]) ** (7 / 2)) * 6 - ((1 / dist_and_dir(i, j)[3]) ** (13 / 2)) * 12)
 
 
 
@@ -127,6 +127,5 @@ for step in range(1, n + 1):
 		elif z[i] < 0 :
 			z[i] +=L
 	EnF[step] = EnK + EnP
-print(EnF)
-for i in range(0, N, 100):
-	print EnF[i]
+for i in range(0, n, 1000):
+	print (EnF[i])
